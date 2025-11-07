@@ -4,11 +4,12 @@ import { PrimaryButtonComponent } from "./_components/primary-button/primary-but
 import { SecondaryButtonComponent } from './_components/secondary-button/secondary-button.component';
 import { ItemCertificadoComponent } from "./_components/item-certificado/item-certificado.component";
 import { BaseUiComponent } from './_components/base-ui/base-ui.component';
+import { CertificadosComponent } from "./pages/certificados/certificados.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, PrimaryButtonComponent, SecondaryButtonComponent, ItemCertificadoComponent, BaseUiComponent],
+  imports: [NavbarComponent, PrimaryButtonComponent, SecondaryButtonComponent, ItemCertificadoComponent, BaseUiComponent, CertificadosComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
