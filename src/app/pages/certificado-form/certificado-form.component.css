@@ -74,6 +74,9 @@ label {
   height: 40px;
 }
 
+.custom-input-group {
+  margin-bottom: 20px !important;
+}
 
 .custom-input:focus {
  border:1px solid #3B5Ac2;
