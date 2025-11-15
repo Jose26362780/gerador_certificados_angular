@@ -4,24 +4,17 @@ import { CertificadosComponent } from './pages/certificados/certificados.compone
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-
-  {
-    path:"",
-    component:CertificadosComponent,
-
+    {
+      path:"",
+      component:CertificadosComponent,
+    },
+    {
+    path:"certificados/novo",
+    component:CertificadosFormComponent
   },
-
-
   {
-  path:"certificados/novo",
-  component:CertificadosFormComponent
-
-},
-
-{
-  path:"certificados/:id",
-  component: CertificadoComponent
-
-}
+    path:"certificados/:id",
+    component: CertificadoComponent
+  }
 
 ];
