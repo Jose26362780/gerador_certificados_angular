@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { CertificadoService } from './_services/certificado.service';
+import { Component, OnInit } from '@angular/core';
 import { NavbarComponent } from "./_components/navbar/navbar.component";
 
 
@@ -16,7 +17,14 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'gerador_certificados_angular';
-  exibeNavbar: boolean = false;
+  exibeNavbar: boolean = true;
+
+  constructor(private CertificadoService: CertificadoService) {}
+
+  ngOnInit(): void {
+    const certificados = localStorage.getItem('certificados');
+    this.CertificadoService.certificados = certificados ? JSON.parse(certificados) : [];
+  }
 }
