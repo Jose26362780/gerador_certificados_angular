@@ -23,6 +23,6 @@ export class CertificadoComponent implements OnInit {
       this.id = params.get('id');
       this.certificado = this.CertificadoService.certificados.find(item => item.id === this.id);
     });
-    console.log(this.CertificadoService.certificados);
+  
   }
 }
