@@ -1,27 +1,21 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { SecondaryButtonComponent } from '../secondary-button/secondary-button.component';
-import { Router, } from "@angular/router";
 
 @Component({
   selector: 'app-item-certificado',
-  standalone: true,
   imports: [SecondaryButtonComponent],
   templateUrl: './item-certificado.component.html',
-  styleUrls: ['./item-certificado.component.css']
+  styleUrl: './item-certificado.component.css',
 })
 export class ItemCertificadoComponent {
   @Input() nomeAluno: string = '';
-  @Input() dataEmissao: string  = '';
-  @Input() id: string =' 0';
+  @Input() dataEmissao: string = '';
+  @Input() id: string = '';
 
+  constructor(private router: Router) {}
 
-
-
-  constructor(private router:Router){}
-
-    redirecionaCertificado(){
-      this.router.navigate(['/certificados', this.id]);
-    }
-
+  redirecionaCertificado() {
+    this.router.navigate(['/certificados', this.id]);
   }
-
+}

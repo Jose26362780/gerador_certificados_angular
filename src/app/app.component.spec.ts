@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'gerador_certificados_angular' title`, () => {
+  it(`should have the 'gerador-certificado' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('gerador_certificados_angular');
+    expect(app.title).toEqual('gerador-certificado');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, gerador_certificados_angular');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, gerador-certificado');
   });
 });

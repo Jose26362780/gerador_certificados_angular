@@ -4,12 +4,19 @@
   >
     <div routerLink="/" class="d-flex align-items-center btn-voltar">
       <i class="ph ph-arrow-left"></i>
-      <p class="m-0">Voltar.</p>
+      <p class="m-0">Voltar</p>
     </div>
-    <app-secondary-button (click)="downloadCertificado()" phClass="ph ph-download-simple" textoBotao="Download"  ></app-secondary-button>
+    <app-secondary-button
+      (click)="downloadCertificado()"
+      phClass="ph ph-download-simple"
+      textoBotao="Download"
+    ></app-secondary-button>
   </div>
   @if (certificado) {
-    <div #certificadoContainer class="certificado d-flex justify-content-center align-items-center">
+  <div
+    #certificadoContainer
+    class="certificado d-flex justify-content-center align-items-center"
+  >
     <img
       class="icone-medalha"
       src="certificate/certificate_ribbon.png"
@@ -26,21 +33,18 @@
           <h1>CERTIFICADO DE CONCLUSÃO</h1>
           <p>Este certificado comprova que</p>
         </div>
-        <p class="nome-aluno">{{certificado.nome}}</p>
+        <p class="nome-aluno">{{ certificado.nome }}</p>
         <div class="lista-atividade-group">
-          <p class="lista-atividade-titulo">
+          <p class="mb-2 lista-atividade-titulo">
             Concluiu com sucesso as seguintes atividades:
           </p>
           <p class="lista-atividade">
-           {{certificado.atividades.join(', ')}}
+            {{ certificado.atividades.join(", ") }}
           </p>
         </div>
       </div>
-      <p class="data-emissao">Emitido em {{ certificado.dataEmissao}}</p>
+      <p class="data-emissao">Emitido em {{ certificado.dataEmissao }}</p>
     </div>
   </div>
-
   }
-
-
 </div>

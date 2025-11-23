@@ -1,30 +1,27 @@
-import { CertificadoService } from './_services/certificado.service';
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { NavbarComponent } from "./_components/navbar/navbar.component";
-
-
-
+import { RouterOutlet } from '@angular/router';
 import { BaseUiComponent } from './_components/base-ui/base-ui.component';
 
-
-
-import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './_components/navbar/navbar.component';
+import { CertificadoService } from './_services/certificado.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [NavbarComponent, BaseUiComponent, RouterOutlet],
+  imports: [NavbarComponent, CommonModule, BaseUiComponent, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
-  title = 'gerador_certificados_angular';
+  title = 'gerador-certificado';
   exibeNavbar: boolean = true;
 
-  constructor(private CertificadoService: CertificadoService) {}
+  constructor(private certificadoService: CertificadoService) {}
 
   ngOnInit(): void {
     const certificados = localStorage.getItem('certificados');
-    this.CertificadoService.certificados = certificados ? JSON.parse(certificados) : [];
+    this.certificadoService.certificados = certificados
+      ? JSON.parse(certificados)
+      : [];
   }
 }

@@ -1,20 +1,19 @@
-import { CertificadosFormComponent } from './pages/certificado-form/certificado-form.component';
-import { CertificadoComponent } from './pages/certificado/certificado.component';
-import { CertificadosComponent } from './pages/certificados/certificados.component';
 import { Routes } from '@angular/router';
+import { CertificadoComponent } from './pages/certificado/certificado.component';
+import { CertificadosFormComponent } from './pages/certificados-form/certificados-form.component';
+import { CertificadosComponent } from './pages/certificados/certificados.component';
 
 export const routes: Routes = [
-    {
-      path:"",
-      component:CertificadosComponent,
-    },
-    {
-    path:"certificados/novo",
-    component:CertificadosFormComponent
+  {
+    path: '',
+    component: CertificadosComponent,
   },
   {
-    path:"certificados/:id",
-    component: CertificadoComponent
-  }
-
+    path: 'certificados/novo',
+    component: CertificadosFormComponent,
+  },
+  {
+    path: 'certificados/:id',
+    component: CertificadoComponent,
+  },
 ];

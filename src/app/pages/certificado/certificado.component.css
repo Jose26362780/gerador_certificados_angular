@@ -6,7 +6,7 @@
 
 .btn-voltar {
   gap: 6px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .btn-voltar p {
@@ -16,7 +16,6 @@
   letter-spacing: 0;
   vertical-align: middle;
   color: #64748b;
-
 }
 
 .btn-voltar i {
@@ -60,16 +59,16 @@
   gap: 20px;
 }
 
-.titulo-subtitulo-certificado h1{
+.titulo-subtitulo-certificado h1 {
   text-align: center;
   font-weight: 900;
-  font-size: 24px
+  font-size: 24px;
   line-height: 160%;
   letter-spacing: 2.4px;
-  color: #1A2856;
+  color: #1a2856;
 }
 
-.titulo-subtitulo-certificado p{
+.titulo-subtitulo-certificado p {
   font-weight: 400;
   font-size: 12px;
   line-height: 160%;
@@ -79,17 +78,17 @@
   color: #121621;
 }
 
-.nome-aluno{
-  font-family: 'Dancing Script';
+.nome-aluno {
+  font-family: "Dancing Script";
   font-weight: 700;
   font-size: 52px;
   line-height: 80px;
   letter-spacing: 0;
   text-align: center;
-  color: #3B5AC2
+  color: #3b5ac2;
 }
 
-.lista-atividade{
+.lista-atividade {
   width: 413.7px;
 }
 
@@ -100,10 +99,9 @@
   letter-spacing: 0;
   text-align: center;
   color: #121621;
-  margin-bottom: 8px !important;
 }
 
-.lista-atividade{
+.lista-atividade {
   font-weight: 400;
   font-size: 14px;
   line-height: 160%;
@@ -112,17 +110,16 @@
   color: #121621;
 }
 
-.data-emissao{
+.data-emissao {
   color: #121621;
   font-weight: 700;
   font-size: 11.2px;
   line-height: 160%;
   letter-spacing: 0;
   text-align: center;
-
 }
 
-.img-assinatura{
+.img-assinatura {
   position: absolute;
   right: 40px;
   bottom: 24px;

@@ -40,8 +40,5 @@
       "source": "Git Bash"
     }
   },
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "terminal.integrated.defaultProfile.windows": "Git Bash"
 }
