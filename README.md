@@ -69,6 +69,15 @@ Este projeto utiliza tecnologias simples e performáticas do ecossistema web:
 
 ## 🧩 Funcionalidades
 
+- ✅ Criar certificado (nome + atividades + data automática)
+- 📜 Listar certificados persistidos
+- 🔍 Visualizar detalhes individuais
+- 📥 Download como imagem (PNG) do layout renderizado
+- 💾 Persistência automática via localStorage
+- 🗑️ Possível extensão para excluir (fácil adicionar)
+- 🖼️ Fontes decorativas e layout responsivo básico
+
+
 ## 🛠️ Como Rodar o Projeto Localmente
 
 Siga os passos abaixo para rodar o projeto na sua máquina:
