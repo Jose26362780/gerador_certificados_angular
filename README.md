@@ -1,59 +1,109 @@
-# GeradorCertificado
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+# 🎓 Gerador de Certificados | Aplicação Angular  
 
-## Development server
+Aplicação web para criação, listagem, visualização e download de certificados personalizados. Focada em simplicidade, persistência local e experiência do usuário. Usa componentes standalone do Angular e captura visual com html2canvas para exportar certificados como imagem.
 
-To start a local development server, run:
+Durante o desenvolvimento, foco em:
+- Arquitetura moderna Angular (Standalone + `@if` / `@for` syntax).
+- Persistência simples via `localStorage` (sem backend).
+- Separação clara entre páginas, componentes e serviços.
+- Design adaptável e tipografia personalizada (Google Fonts).
+- Geração de imagem do certificado (download rápido).
 
-```bash
-ng serve
-```
+![preview](.github/cover.png)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🚀 Tecnologias Utilizadas
+ 
+Este projeto utiliza tecnologias simples e performáticas do ecossistema web:
 
-```bash
-ng generate component component-name
-```
+![Angular](https://img.shields.io/badge/Angular-DB0535?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![LocalStorage](https://img.shields.io/badge/LocalStorage-333333?style=for-the-badge&logo=googlechrome&logoColor=white)
+![html2canvas](https://img.shields.io/badge/html2canvas-0A0A0A?style=for-the-badge&logo=javascript&logoColor=white)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📂 Estrutura do Projeto
 
 ```bash
-ng test
+.
+├── src/
+│  ├── app/
+│  │  ├── app.component.*            # Componente raiz
+│  │  ├── app.routes.ts              # Definição das rotas
+│  │  ├── _services/
+│  │  │  └── certificado.service.ts  # Lógica e persistência de certificados
+│  │  ├── _components/
+│  │  │  ├── navbar/
+│  │  │  ├── primary-button/
+│  │  │  ├── secondary-button/
+│  │  │  ├── item-certificado/
+│  │  │  └── base-ui/
+│  │  ├── pages/
+│  │  │  ├── certificados/           # Lista de certificados
+│  │  │  ├── certificado-form/       # Formulário de criação
+│  │  │  └── certificado/            # Visualização + download
+│  ├── assets/
+│  │  └── certificate/               # Imagens (fundo, ribbon, assinatura)
+│  ├── styles.css                    # Estilos globais
+├── [angular.json](http://_vscodecontentref_/0)
+├── [package.json](http://_vscodecontentref_/1)
+└── [README.md](http://_vscodecontentref_/2)
+
 ```
 
-## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
+## 🧩 Fluxo Básico
+
+1. Usuário acessa /.
+2. Se não há certificados: interface mostra card vazio com CTA para gerar.
+3. Em /certificados/novo, preenche dados e confirma.
+4. Certificado é salvo no localStorage via serviço.
+5. Listagem mostra itens; clique redireciona para /certificados/:id.
+6. Página de certificado aplica imagens + fontes e permite download.
+
+## 🧩 Funcionalidades
+
+## 🛠️ Como Rodar o Projeto Localmente
+
+Siga os passos abaixo para rodar o projeto na sua máquina:
+
+1. Clonar o repositório
 
 ```bash
-ng e2e
+git clone <https://github.com/Jose26362780/gerador_certificados_angular>
+cd gerador_certificados_angular
+npm install
+npm start
+# Acessar: http://localhost:4200
+
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
+## 🔗 Deploy 
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![github](https://img.shields.io/badge/github-000000?style=for-the-badge&logo=github&logoColor=white)
+![netlify](https://img.shields.io/badge/netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+
+
+## 💻 Sobre mim 😄
+ Entusiasta da programação e Engenheiro de Software com foco em desenvolvimento full stack. Dedicado a criar experiências digitais inovadoras que impactam o mundo através da tecnologia.
+
+## 🔗 Contato 
+
+[![linkedin](https://img.shields.io/badge/Linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jose-martinez-352032222/)
+[![gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](https://mailto:juniorjose1925@gmail.com)
+[![portfolio](https://img.shields.io/badge/Jose.Dev-0A0A03?style=for-the-badge&logo=react&logoColor=)](https://my-portfolio-jose-martinez.netlify.app/)
+
+
+
+
+
+
+
+
